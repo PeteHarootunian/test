@@ -1,0 +1,21 @@
+<ion-menu side="right" [content]="content">
+    <ion-content>
+        <button class="btn view-contact" (click)="showComponent(viewContacts)" menuToggle>
+                <img src="assets/images/icon-contact.png"> VIEW CONTACTS</button>
+        <div>
+            <!-- <button class="draw-button" ion-button icon-only menuToggle (click)="goDraw()">
+				<ion-icon name="create"></ion-icon>
+            </button> -->
+            <img class="draw-button" src="assets/images/icon-draw.png" menuToggle (click)="goDraw()" />
+            <!-- <ion-icon name="brush"></ion-icon> -->
+            <ion-item class="attract-mode-item">
+                <ion-toggle color="secondary" checked [(ngModel)]="enableKiosk" (click)="startTimerForKiosk()"></ion-toggle>
+                <ion-label>Attract Mode Video</ion-label>
+            </ion-item>
+            <button class="btn" (click)="exitApplication()" menuToggle>Exit</button>
+            <button class="btn" menuToggle>Reset</button>
+            <img class="logo img-responsive" src="assets/images/command-app-logo.png" alt="logo" />
+        </div>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content #myNav></ion-nav>
